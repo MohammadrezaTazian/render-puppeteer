@@ -1,10 +1,8 @@
-FROM node:18-slim
+FROM node:20-slim
 
 WORKDIR /app
 
-COPY package*.json ./
-RUN npm install
-
+# نصب وابستگی‌های سیستمی
 RUN apt-get update && apt-get install -y \
     chromium \
     fonts-ipafont-gothic \
@@ -12,6 +10,9 @@ RUN apt-get update && apt-get install -y \
     fonts-thai-tlwg \
     fonts-kacst \
     fonts-freefont-ttf
+
+COPY package*.json ./
+RUN npm install
 
 COPY . .
 

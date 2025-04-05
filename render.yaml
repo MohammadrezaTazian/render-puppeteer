@@ -1,9 +1,10 @@
 services:
   - type: web
-    name: puppeteer-app
+    name: puppeteer-latest
     env: node
     buildCommand: |
       npm install
       apt-get update && apt-get install -y chromium
-    startCommand: npm start
-    plan: free # یا standard
+    startCommand: node index.js
+    plan: standard # حداقل 1GB RAM
+    nodeVersion: 20.18.1

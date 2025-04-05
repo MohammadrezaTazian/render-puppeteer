@@ -6,9 +6,9 @@
     "start": "node index.js"
   },
   "dependencies": {
-    "puppeteer": "^21.0.0"
+    "puppeteer": "^22.0.0"
   },
   "engines": {
-    "node": "18.x"
+    "node": ">=20.0.0"
   }
 }
