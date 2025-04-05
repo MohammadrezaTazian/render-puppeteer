@@ -9,6 +9,6 @@
     "puppeteer": "^21.0.0"
   },
   "engines": {
-    "node": "18.x" // نسخه Node.js منطبق با render.com
+    "node": "18.x"
   }
 }
