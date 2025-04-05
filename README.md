@@ -1,2 +1,1 @@
-# render-puppeteer-
 render-puppeteer 
