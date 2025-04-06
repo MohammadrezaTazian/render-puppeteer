@@ -1,6 +1,5 @@
 FROM node:20-slim
 
-# نصب وابستگی‌های سیستمی برای Chromium
 RUN apt-get update && apt-get install -y \
     chromium \
     fonts-ipafont-gothic \
@@ -18,4 +17,5 @@ RUN npm install
 
 COPY . .
 
+EXPOSE 10000
 CMD ["node", "index.js"]
