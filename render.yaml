@@ -1,12 +1,12 @@
 services:
   - type: web
-    name: puppeteer-lite
+    name: puppeteer-fullpage
     env: node
     buildCommand: |
       npm install
       apt-get update && apt-get install -y chromium
-    startCommand: node index.js
-    plan: free
+    startCommand: npm start
+    plan: standard # پیشنهاد برای صفحات بزرگ
     envVars:
       - key: PORT
         value: "10000"

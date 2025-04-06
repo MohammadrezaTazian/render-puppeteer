@@ -10,9 +10,9 @@ WORKDIR /app
 
 COPY package*.json ./
 
-# نصب با حداقل مصرف حافظه
-RUN npm install --production --no-optional
+# نصب با بهینه‌سازی حافظه
+RUN npm install --production --no-optional --prefer-offline
 
 COPY . .
 
-CMD ["node", "index.js"]
+CMD ["npm", "start"]
