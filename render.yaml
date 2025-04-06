@@ -1,10 +1,16 @@
 services:
   - type: web
-    name: puppeteer-latest
+    name: puppeteer-service
     env: node
     buildCommand: |
       npm install
       apt-get update && apt-get install -y chromium
     startCommand: node index.js
-    plan: standard # حداقل 1GB RAM
-    nodeVersion: 20.18.1
+    plan: standard
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: PUPPETEER_SKIP_CHROMIUM_DOWNLOAD
+        value: "true"
+      - key: PUPPETEER_EXECUTABLE_PATH
+        value: "/usr/bin/chromium"
